@@ -36,8 +36,8 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
+
 
 .header{
     padding: 2rem 9%;
@@ -46,6 +46,7 @@ html {
     align-items: center;
     background: var(--brand);
     height: 8rem;
+    
 }
 .header .logo a{
     font-weight: 500;
@@ -108,17 +109,14 @@ html {
       display: initial;
  }
 .header .navbar {
+    transition: 0.2s ease-in-out;
     position: absolute;
     top: 11%;
-    right: -100rem;
-    box-shadow: var(--box-shadow);
+    right: -100%;
+    transform: scale(0);
+    transform-origin: right;
     width: 40rem;
-    height: 70vh;
-    /* border-top-left-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem;
-    border-top-right-radius: 1.5rem;
-    border-bottom-right-radius: 1.5rem; */
-    /* Short Hand Property */
+    height: 70%;
     border-radius: 1.5rem;
     background-color: var(--white);
     border: 2px solid var(--off-white);
@@ -126,7 +124,6 @@ html {
 
 
 .header .navbar .btn{
-    margin-top: 10rem;
     background-color: var(--brand);
     color: var(--white);
     border-radius: 2rem;
@@ -137,9 +134,10 @@ html {
 }
 
 
-  
+
 .header .navbar.active {
     right: 1rem;
+    transform: scale(1);
 }
   
 .header .navbar a {
@@ -164,9 +162,22 @@ html {
     html {
       font-size: 50%;
     }
-    .header .navbar .btn{
-        margin-top: 13rem;
+    
+}
+@media (max-width: 342px) {
+    html {
+      font-size: 50%;
     }
+
+    .header .navbar{
+        width: 30rem;
+    }
+
+    .header .navbar .btn{
+        width: 60%;
+    }
+    
+    
 }
 
 .hero{
