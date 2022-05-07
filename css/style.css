@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+:root {
+    --brand: #5865f2;
+    --brand-gradient: linear-gradient(90deg,#8ea1e1,#7289da);
+    --greyple: #99aab5;
+    --dark-not-black: #2c2f33;
+    --focus-border: #00b0f4;
+    --status-green: #43b581;
+    --text-link: #00b0f4;
+    --off-white: #f6f6f6;
+    --white: #fff;
+    --not-quite-black: #3e4042;
+    --not-quite-black-rgb: 35,39,42;
+    --black: #000;
+    --ekko-red: #de2761;
+    --page-max-width: 1260px;
+    --page-max-width-med: 1024px;
+    --num-grid-columns: 4;
+    --page-gutter: 24px;
+    --section-spacing: 56px;
+}
+*{
+  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  transition: 0.2s ease-in-out;
+  color: #000;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.header{
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--brand);
+    height: 8rem;
+}
+.header .logo a{
+    font-weight: 500;
+    font-size: 2.5rem;
+    color: var(--white);
+}
+  
+.header .logo i {
+  color: var(--Soft-Blue);
+}
+  
+.header .navbar a {
+   font-size: 1.7rem;
+   color: var(--white);
+   margin-left: 2rem;
+
+}
+  
+.header .navbar a:hover {
+    text-decoration: underline;
+}
+
+.header .navbar .btn{
+    font-weight: 500;   
+    padding: 1rem 1.5rem;
+    background: var(--white);
+    color: var(--black);
+    font-size: 1.4rem;
+    border-radius: 2rem;
+}
+
+.header .btn:hover{
+    box-shadow: 0.2rem 0.7rem .7rem var(--not-quite-black);
+}
+
+#menu-btn {
+    padding: 1rem 1rem;
+    font-size: 4rem;
+    color: #fff;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    display: none; 
+    font-weight: bold;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 991px) {
+    html {
+      font-size: 55%;
+    }
+    .header {
+      padding: 2rem;
+    }
+}
+  
+ @media (max-width: 768px) {
+    #menu-btn {
+      display: initial;
+ }
+.header .navbar {
+    position: absolute;
+    top: 11%;
+    right: -100rem;
+    box-shadow: var(--box-shadow);
+    width: 40rem;
+    height: 70vh;
+    /* border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem; */
+    /* Short Hand Property */
+    border-radius: 1.5rem;
+    background-color: var(--white);
+    border: 2px solid var(--off-white);
+}
+
+
+.header .navbar .btn{
+    margin-top: 10rem;
+    background-color: var(--brand);
+    color: var(--white);
+    border-radius: 2rem;
+    width: 50%;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0;
+}
+
+
+  
+.header .navbar.active {
+    right: 1rem;
+}
+  
+.header .navbar a {
+    margin: 2rem;
+    text-align: left;
+    display: block;
+    font-size: 2rem;
+    padding-left: 1rem;
+    color: var(--black);
+   }
+ }
+
+.header .navbar a:nth-child(1){
+    margin-top: 4rem;
+    background-color: var(--off-white);
+    color: var(--text-link);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+  
+@media (max-width: 450px) {
+    html {
+      font-size: 50%;
+    }
+    .header .navbar .btn{
+        margin-top: 13rem;
+    }
+}
+
+.hero{
+    height: 100vh;
+    background: var(--brand);
+}
